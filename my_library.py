@@ -51,3 +51,5 @@ def metrics (your_pred_act_list):
   accuracy = (tp+tn)/(tp+fp+fn+tn) if tp+fp+fn+tn !=0 else 0
 
   return {'Precision': precision, 'Recall': recall, 'F1':f1, 'Accuracy':accuracy}
+
+from sklearn.ensemble import RandomForestClassifier
