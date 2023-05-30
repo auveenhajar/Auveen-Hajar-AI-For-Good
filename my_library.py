@@ -37,7 +37,7 @@ def metrics (your_pred_act_list):
   assert isinstance(your_pred_act_list, list), 'Parameter is not a list.'
   assert all(isinstance(pair, list) for pair in your_pred_act_list), 'Parameter is not a list of lists.'
   assert all(len(pair) == 2 for pair in your_pred_act_list), 'Parameter is not a zipped list.'
-  assert all(isinstance(item, int) for pair in your_pred_act_list for item in pair), 'Each value in the pair must be an integer.'
+  assert all(isinstance(item, (int, float)) for pair in your_pred_act_list for item in pair), 'Each value in the pair must be an integer.'
   assert all(item >= 0 for pair in your_pred_act_list for item in pair), 'Each value in the pair must be greater than or equal to 0.'
 
   tn = sum([1 if pair==[0,0] else 0 for pair in your_pred_act_list])
