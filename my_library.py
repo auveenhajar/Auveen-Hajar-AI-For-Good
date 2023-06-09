@@ -102,3 +102,11 @@ def try_archs(full_table, target, architectures, thresholds):
     print(up_metrics_table(all_mets))
 
   return None
+
+def feed_forward(net_weights, inputs):
+  for layer in net_weights:
+    output = [node(inputs, node_weights) for node_weights in layer]
+    inputs = output 
+  result = output[0]
+
+  return result
