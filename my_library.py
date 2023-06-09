@@ -102,7 +102,3 @@ def try_archs(full_table, target, architectures, thresholds):
     print(up_metrics_table(all_mets))
 
   return None
-
-def generate_random(n):
-  random_weights = [round(uniform(-1, 1), 2) for i in range(n)]
-  return random_weights
