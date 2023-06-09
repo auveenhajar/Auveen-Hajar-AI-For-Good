@@ -104,7 +104,6 @@ def try_archs(full_table, target, architectures, thresholds):
   return None
 
 from random import seed, uniform
-seed(123)
 
 def generate_random(n):
   random_weights = [round(uniform(-1, 1), 2) for i in range(n)]
