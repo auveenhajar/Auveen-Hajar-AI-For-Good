@@ -33,7 +33,7 @@ def naive_bayes(table, evidence_row, target):
   neg, pos = compute_probs(neg_cond_prob, pos_cond_prob)
   return [neg, pos]
 
-from sklearn.ensemble import RandomForestClassifier  #make sure this makes it into your library
+from sklearn.ensemble import RandomForestClassifier
 
 def run_random_forest(train, test, target, n):
 
