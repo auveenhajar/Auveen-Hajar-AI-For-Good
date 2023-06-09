@@ -117,7 +117,6 @@ def sigmoid(x):
 def node(inputs, weights):
   assert isinstance(inputs,list)
   assert isinstance(weights, list)
-  assert len(inputs)==len(weights)
 
   zipped = up_zip_lists(inputs,weights)
   z = sum([x*y for x,y in zipped])  #dot product
