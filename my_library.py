@@ -108,5 +108,4 @@ def feed_forward(net_weights, inputs):
     output = [node(inputs, node_weights) for node_weights in layer]
     inputs = output 
   result = output[0]
-
   return result
