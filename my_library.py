@@ -109,3 +109,18 @@ def feed_forward(net_weights, inputs):
     inputs = output 
   result = output[0]
   return result
+
+from math import exp
+
+def sigmoid(x):
+  return 1/(1 + exp(-x))
+
+def node(inputs, weights):
+  assert isinstance(inputs,list)
+  assert isinstance(weights, list)
+  assert len(inputs)==len(weights)
+
+  zipped = up_zip_lists(inputs,weights)
+  z = sum([x*y for x,y in zipped])  #dot product
+  s = sigmoid(z)  #value between 0 and 1 - will treat as the "pos" probability
+  return s
